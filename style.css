@@ -1,0 +1,45 @@
+body {
+	height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: #222;
+}
+
+a {
+	text-decoration: none;
+	color: white;
+	font-family: sans-serif;
+	font-size: 40px;
+	border: 3px solid white;
+	padding: 40px 80px;
+	position: relative;
+	transition: all 1s;
+	overflow: hidden;
+}
+
+a:before {
+	/* we will be adding text */
+	content: 'It is Easy!';
+	color: white;
+	background-color: #F44336;
+	/* we will use flex property to set its position
+	to center, both horizontally and vertically */
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	/* set the position of css */
+	position: absolute;
+	left: 0;
+	top: 0;
+	/* set the size */
+	height: 100%;
+	width: 100%;
+	/* transform property is set to -100% which will be change on hover */
+	transform: translateY(-100%);
+	transition:all .5s;
+}
+
+a:hover:before {
+	transform: translateY(0);
+}
